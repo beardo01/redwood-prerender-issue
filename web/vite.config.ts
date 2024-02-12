@@ -11,6 +11,13 @@ dns.setDefaultResultOrder('verbatim')
 
 const viteConfig: UserConfig = {
   plugins: [redwood()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/_mantine";`,
+      },
+    },
+  },
 }
 
 export default defineConfig(viteConfig)
